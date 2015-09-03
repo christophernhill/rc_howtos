@@ -1,3 +1,7 @@
+<strong>Starting up an Interactive Session</strong>
+<p>To run Gaussian, you will need to start up an interactive session via SLURM</p>
+> srun --pty -N 1 --exclusive -p defq /bin/bash
+
 <strong>Load the Gaussian Module for c3ddb</strong>
 <p>You will need to add the gaussian module each time you login to c3ddb</p>
 > module add c3ddb/gaussian
