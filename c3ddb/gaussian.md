@@ -34,7 +34,8 @@
 
 <strong>hexclethane.com</strong>
     
-<pre><code>  # HF/MP2 6-31g opt
+<pre><code> 
+# HF/MP2 6-31g opt
 
 Ethane
 
