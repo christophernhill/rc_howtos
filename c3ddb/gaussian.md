@@ -24,13 +24,13 @@
 
 <p>It is strongly reccomended to make a new directory before running tests </p>
 
-><p>The variable PGI_TERM needs to be unset or else it will cause script errors</p>
->>unset PGI_TERM
+<p>The variable PGI_TERM needs to be unset or else it will cause script errors</p>
+>unset PGI_TERM
 
-><p>If you want to run the default set of Gaussian provided test jobs then you can simply use submit.csh to run the number of tests desired, where X is the first test and Y is the last one. The tests will run sequentially and deposit the .log files into your amd64 directory.</p>
->>$g09root/g09/tests/submit.csh X Y
+<p>If you want to run the default set of Gaussian provided test jobs then you can simply use submit.csh to run the number of tests desired, where X is the first test and Y is the last one. The tests will run sequentially and deposit the .log files into your amd64 directory.</p>
+>$g09root/g09/tests/submit.csh X Y
 
-><p>The examples in this guide will use the hexclethane.com file, you can copy and paste the code below into a file and save it as hexclethane.com to run the examples if desired.</p>
+<p>The examples in this guide will use the hexclethane.com file, you can copy and paste the code below into a file and save it as hexclethane.com to run the examples if desired.</p>
 
 <strong>hexclethane.com</strong>
     
@@ -60,19 +60,19 @@ T5 = -125.0
 </code></pre>
 
 
-><p>If you would rather run your own .com test then you will need to copy the .com file of your choice into your working directory, for this example we use the hexclethane.com file.</p>
+<p>If you would rather run your own .com test then you will need to copy the .com file of your choice into your working directory, for this example we use the hexclethane.com file.</p>
 
->>cp /pathto.comfile/hexclethane.com /home/$USER/workingdirectoryname
-
-
+>cp /pathto.comfile/hexclethane.com /home/$USER/workingdirectoryname
 
 
-><p>Run your .com job file and create a log file in the amd64 directory</p>
->>g09 < hexclethane.com > /home/$USER/workingdirectory/amd64/hexclethane.log
 
-><p>Copy the log folder from your amd64 folder into your working directory</p>
 
->>cp /home/$USER/nameofyourworkingdirectory/amd64/test0000.log /home/$USER/workingdirectoryname
+<p>Run your .com job file and create a log file in the amd64 directory</p>
+>g09 < hexclethane.com > /home/$USER/workingdirectory/amd64/hexclethane.log
 
-><p>The d1 command will diff the files from X to Y and filter out the insignificant differences from the output files.</p>
->>$g09root/g09/tests/d1 X Y
+<p>Copy the log folder from your amd64 folder into your working directory</p>
+
+>cp /home/$USER/nameofyourworkingdirectory/amd64/test0000.log /home/$USER/workingdirectoryname
+
+<p>The d1 command will diff the files from X to Y and filter out the insignificant differences from the output files.</p>
+>$g09root/g09/tests/d1 X Y
