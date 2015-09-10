@@ -30,6 +30,7 @@
 <p>If you want to run the default set of Gaussian provided test jobs then you can simply use submit.csh to run the number of tests desired, where X is the first test and Y is the last one. The tests will run sequentially and deposit the .log files into your amd64 directory.</p>
 >$g09root/g09/tests/submit.csh X Y
 
+#Testing .com files
 <p>The examples in this guide will use the hexclethane.com file, you can copy and paste the code below into a file and save it as hexclethane.com to run the examples if desired.</p>
 
 <strong>hexclethane.com</strong>
