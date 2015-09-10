@@ -74,7 +74,7 @@ T5 = -125.0
 
 <p>Copy the log folder from your amd64 folder into your working directory</p>
 
->cp /home/$USER/nameofyourworkingdirectory/amd64/test0000.log /home/$USER/workingdirectoryname
+>cp /home/$USER/nameofyourworkingdirectory/amd64/hexclethane.log /home/$USER/workingdirectoryname
 
 <p>The d1 command will diff the files from X to Y and filter out the insignificant differences from the output files.</p>
 >$g09root/g09/tests/d1 X Y
