@@ -3,22 +3,21 @@ The following guides were created based on the tutorial found here:
 
 
 
-1.Running Gaussian from a batch script
+#Running Gaussian from a batch script
 
-<strong>Load the Gaussian Module for c3ddb</strong>
-<p>You will need to add the gaussian module each time you login to c3ddb</p>
+Load the Gaussian Module for c3ddb
+You will need to add the gaussian module each time you login to c3ddb
 > module add c3ddb/gaussian
 
 
-<p>It is strongly reccomended to make a new directory before running tests </p>
+It is strongly reccomended to make a new directory before running tests 
 
 >mkdir /home/$USER/gaussianwork && cd  home/$USER/gaussianwork
 
-<p>The variable PGI_TERM needs to be unset or else it will cause script errors</p>
+The variable PGI_TERM needs to be unset or else it will cause script errors</p>
 >unset PGI_TERM
 
-<strong>Testing .com files</strong>
-<p>The examples in this guide will use the hexclethane.com file, you can copy and paste the code below into a file and save it as hexclethane.com to run the examples if desired.</p>
+The example in this guide will use the hexclethane.com file, you can copy and paste the code below into a file and save it as hexclethane.com to run the examples if desired.
 
 <strong>hexclethane.com</strong>
     
@@ -74,25 +73,25 @@ g09 < hexclethane.com | tee /home/$USER/gaussianwork/hexclethane.log
 
 
 
-2. <strong>Running Gaussian in an interactive session </strong>
-<p>To run Gaussian, you will need to start up an interactive session via SLURM</p>
+2. Running Gaussian in an interactive session 
+To run Gaussian, you will need to start up an interactive session via SLURM
 > srun --pty -N 1 --exclusive -p defq /bin/bash
 
 
-<strong>Load the Gaussian Module for c3ddb</strong>
-<p>You will need to add the gaussian module each time you login to c3ddb</p>
+Load the Gaussian Module for c3ddb
+You will need to add the gaussian module each time you login to c3ddb
 > module add c3ddb/gaussian
 
 
-<p>It is strongly reccomended to make a new directory before running tests </p>
+It is strongly reccomended to make a new directory before running tests 
 
 >mkdir /home/$USER/gaussianwork && cd  /home/$USER/gaussianwork
 
-<p>The variable PGI_TERM needs to be unset or else it will cause script errors</p>
+The variable PGI_TERM needs to be unset or else it will cause script errors
 >unset PGI_TERM
 
-<strong>Testing .com files</strong>
-<p>The examples in this guide will use the hexclethane.com file, you can copy and paste the code below into a file and save it as hexclethane.com to run the examples if desired.</p>
+
+The examples in this guide will use the hexclethane.com file, you can copy and paste the code below into a file and save it as hexclethane.com to run the examples if desired.</p>
 
 <strong>hexclethane.com</strong>
     
@@ -122,7 +121,7 @@ T5 = -125.0
 
 </code></pre>
 
-<p>Run your .com job file and produce a log file/p>
+Run your .com job file and produce a log file
 
 
 >g09 < hexclethane.com | tee /home/$USER/gaussianwork/hexclethane.log
