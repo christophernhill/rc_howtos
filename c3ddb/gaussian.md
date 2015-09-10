@@ -73,7 +73,7 @@ g09 < hexclethane.com | tee /home/$USER/gaussianwork/hexclethane.log
 
 
 
-2. Running Gaussian in an interactive session 
+#Running Gaussian in an interactive session 
 To run Gaussian, you will need to start up an interactive session via SLURM
 > srun --pty -N 1 --exclusive -p defq /bin/bash
 
