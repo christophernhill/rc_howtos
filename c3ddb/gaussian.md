@@ -76,5 +76,45 @@ T5 = -125.0
 
 >cp /home/$USER/nameofyourworkingdirectory/amd64/hexclethane.log /home/$USER/workingdirectoryname
 
+<p> You can automate this process to an extent by creating a simple sript similar to the one below.</p>
+
+<code></pre>
+#!/bin/bash
+
+#SBATCH --job-name=myHexclethane
+#SBATCH --time=0:02:0
+#SBATCH --mem-per-cpu=1G
+#
+
+cp /home/$USER/PathToYourComFilesHere/hexclethane.com .
+
+g09 < hexclethane.com > hexclethane.log
+
+cp /home/$USER/PathToYourWorkingDirectory/hexclethane.log /home/$USER/PathToWhereYouWantYourLogFilesHere
+</pre></code>
+
+<p> This simple script when filled out with the appropriate user data will run your com file and place a copy of the log file into a directory of your choice. </p>
+
+<strong>Using more than one CPU <strong>
+
+<p>Gaussian can utilise more than one CPU on a shared memory system You need to ask SLURM for the number of CPUs you need on a single node.
+Example asking for 8 CPUs on a node:
+
+>#SBATCH --nodes=1
+>#SBATCH --ntasks-per-node=8
+
+Then you ask Gaussian to use 8 CPUs by setting the following line in the input file :
+
+>%NProcShared=8
+
+It is very important that you not ask Gaussian to use more CPUs than you have reserved.
+
+
+</p>
+
+
+
+
+<strong>Diffing log file results< /strong>
 <p>The d1 command will diff the files from X to Y and filter out the insignificant differences from the output files.</p>
 >$g09root/g09/tests/d1 X Y
