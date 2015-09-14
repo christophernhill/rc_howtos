@@ -31,8 +31,12 @@
 #SBATCH --time=00:15:00  # days-hours:minutes:seconds
 ## END-DIRECTIVES
 
-echo $SLURM_JOB_ID
+# information useful for debugging
+echo SLURM_JOB_ID: $SLURM_JOB_ID
+echo SLURM_JOB_NODELIST: $SLURM_JOB_NODELIST
 date
-hostname
+echo ""
 
+# science ! 
 sleep 15
+
