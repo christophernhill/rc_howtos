@@ -14,7 +14,7 @@ The examples in this guide will use the hexclethane.com file. You can either:
 
 * Copy and paste the information into a blank file and name it hexclethane.com
 
-<strong>[hexclethane.com](https://raw.githubusercontent.com/mghpcc-projects/rc_howtos/master/c3ddb/hexclethane.com)</strong>
+[click here to download hexclethane.com](Using-Gaussian/hexclethane.com)
 
 
     
@@ -68,7 +68,7 @@ Run your .com job file and produce a log file
 
 >g09 < hexclethane.com | tee /home/$USER/gaussianwork/hexclethane.log
 
-Running Gaussian from a batch script
+#Running Gaussian from a batch script
 
 <p>If you would rather run your own .com test then you will need to copy the .com file of your choice into your working directory, for this example we use the hexclethane.com file.</p>
 
@@ -77,7 +77,7 @@ Running Gaussian from a batch script
 * Creating your own script by copying the script below and adjusting the relevant data.
 
 
-<strong>[gaussiantest.sh](https://raw.githubusercontent.com/mghpcc-projects/rc_howtos/master/c3ddb/gaussiantest.sh)</strong>
+[click here to download gaussiantest.sh](Using-Gaussian/gaussiantest.sh)
 <pre>
 
 #!/bin/bash
