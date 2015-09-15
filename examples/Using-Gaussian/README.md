@@ -10,7 +10,7 @@ It is strongly reccomended to make a new directory before running tests
 
 The examples in this guide will use the hexclethane.com file. You can either:
 
-* Right click the 'hexclethane.com' link below and click 'Save Link As'
+* Right click the 'hexclethane.com' link above and click 'Save Link As'
 
 * Copy and paste the information into a blank file and name it hexclethane.com
 
@@ -73,7 +73,7 @@ Run your .com job file and produce a log file
 <p>If you would rather run your own .com test then you will need to copy the .com file of your choice into your working directory, for this example we use the hexclethane.com file.</p>
 
 <p> To automate this process you can use a simple script like the one shown below by either:</p>
-* Downloading the script by right clicking the 'gaussiantest.sh' link and clicking 'Save Link As'
+* Downloading the script by right clicking the 'gaussiantest.sh' link above and clicking 'Save Link As'
 * Creating your own script by copying the script below and adjusting the relevant data.
 
 
