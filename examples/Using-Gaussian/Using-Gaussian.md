@@ -14,7 +14,7 @@ The examples in this guide will use the hexclethane.com file. You can either:
 
 * Copy and paste the information into a blank file and name it hexclethane.com
 
-[click here to download hexclethane.com](Using-Gaussian/hexclethane.com)
+hexclethane.com
 
 
     
@@ -77,7 +77,7 @@ Run your .com job file and produce a log file
 * Creating your own script by copying the script below and adjusting the relevant data.
 
 
-[click here to download gaussiantest.sh](Using-Gaussian/gaussiantest.sh)
+gaussiantest.sh
 <pre>
 
 #!/bin/bash
