@@ -8,9 +8,15 @@ It is strongly reccomended to make a new directory before running tests
 
 >mkdir /home/$USER/gaussianwork && cd  /home/$USER/gaussianwork
 
-The example in this guide will use the hexclethane.com file, you can copy and paste the code below into a file and save it as hexclethane.com to run the examples if desired.
+The examples in this guide will use the hexclethane.com file. You can either:
 
-<strong>hexclethane.com</strong>
+* Right click the 'hexclethane.com' link below and click 'Save Link As'
+
+* Copy and paste the information into a blank file and name it hexclethane.com
+
+<strong>[hexclethane.com](https://raw.githubusercontent.com/mghpcc-projects/rc_howtos/master/c3ddb/hexclethane.com)</strong>
+
+
     
 <pre>
 # HF/MP2 6-31g opt
@@ -38,6 +44,9 @@ T5 = -125.0
 
 </pre>
 
+
+#
+
 #Running Gaussian in an interactive session 
 
 To run Gaussian, you will need to start up an interactive session via SLURM
@@ -59,16 +68,16 @@ Run your .com job file and produce a log file
 
 >g09 < hexclethane.com | tee /home/$USER/gaussianwork/hexclethane.log
 
-
-
-
-#Running Gaussian from a batch script
+Running Gaussian from a batch script
 
 <p>If you would rather run your own .com test then you will need to copy the .com file of your choice into your working directory, for this example we use the hexclethane.com file.</p>
 
-<p> You can automate this process to an extent by creating a simple script similar to the one below.</p>
+<p> To automate this process you can use a simple script like the one shown below by either:</p>
+* Downloading the script by right clicking the 'gaussiantest.sh' link and clicking 'Save Link As'
+* Creating your own script by copying the script below and adjusting the relevant data.
 
-<strong>example.sh</strong>
+
+<strong>[gaussiantest.sh](https://raw.githubusercontent.com/mghpcc-projects/rc_howtos/master/c3ddb/gaussiantest.sh)</strong>
 <pre>
 
 #!/bin/bash
@@ -88,7 +97,7 @@ g09 &lt; hexclethane.com | tee /home/$USER/gaussianwork/hexclethane.log
 </pre>
 
 <p> This simple script when filled out with the appropriate user data will run your com file and place a copy of the log file into a directory of your choice simply by using the sbatch command followed by your scripts name. </p>
->sbatch example.sh
+>sbatch gaussiantest.sh
 
 
 
@@ -97,4 +106,3 @@ g09 &lt; hexclethane.com | tee /home/$USER/gaussianwork/hexclethane.log
 
 ##Here is a good reference for running Gaussian tests:
 >http://www.gaussian.com/g_tech/g_ur/m_testjobs.htm
-
