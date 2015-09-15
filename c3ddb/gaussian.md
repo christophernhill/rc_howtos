@@ -6,7 +6,7 @@ The following guides were created based on the tutorial found here:
 
 It is strongly reccomended to make a new directory before running tests 
 
->mkdir /home/$USER/gaussianwork && cd  home/$USER/gaussianwork
+>mkdir /home/$USER/gaussianwork && cd  /home/$USER/gaussianwork
 
 The example in this guide will use the hexclethane.com file, you can copy and paste the code below into a file and save it as hexclethane.com to run the examples if desired.
 
@@ -37,6 +37,29 @@ T4 = 125.0
 T5 = -125.0
 
 </pre>
+
+#Running Gaussian in an interactive session 
+
+To run Gaussian, you will need to start up an interactive session via SLURM
+> srun --pty -N 1 --exclusive -p defq /bin/bash
+
+
+Load the Gaussian Module for c3ddb
+You will need to add the gaussian module each time you login to c3ddb
+> module add c3ddb/gaussian
+
+The variable PGI_TERM needs to be unset or else it will cause script errors
+>unset PGI_TERM
+
+
+The example in this guide will use the hexclethane.com file shown above.
+
+Run your .com job file and produce a log file
+
+
+>g09 < hexclethane.com | tee /home/$USER/gaussianwork/hexclethane.log
+
+
 
 
 #Running Gaussian from a batch script
@@ -69,27 +92,6 @@ g09 &lt; hexclethane.com | tee /home/$USER/gaussianwork/hexclethane.log
 
 
 
-
-#Running Gaussian in an interactive session 
-
-To run Gaussian, you will need to start up an interactive session via SLURM
-> srun --pty -N 1 --exclusive -p defq /bin/bash
-
-
-Load the Gaussian Module for c3ddb
-You will need to add the gaussian module each time you login to c3ddb
-> module add c3ddb/gaussian
-
-The variable PGI_TERM needs to be unset or else it will cause script errors
->unset PGI_TERM
-
-
-The example in this guide will use the hexclethane.com file shown above.
-
-Run your .com job file and produce a log file
-
-
->g09 < hexclethane.com | tee /home/$USER/gaussianwork/hexclethane.log
 
 
 
