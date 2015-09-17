@@ -21,11 +21,12 @@ DMTCP can be used in simple computer as well as in an Heigh performance computin
           q<return> to kill processes to be checkpointed
  
 press c to take a snapshot of your running program, so that you can run it later at the same time.
-Three files will be created : dmtcp_restart_script.sh, dmtcp_restart_script_(some_letters_and_numbers}.sh and {some_letters_and_numbers}.dmtcp .
+
+Three files will be created : dmtcp_restart_script.sh, dmtcp_restart_script_(some_letters_and_numbers}.sh and {some_letters_and_numbers}.dmtcp.
 
 To re-run your code at the time you pressed c at, use:
 dmtcp_restart ckpt_*.dmtcp, otherwise dmtcp_restart_script.sh will work.
-(ckpt_python2.7_20385667ca0e9a5-51000-55fae98d.dmtcp as an example )
+(ckpt_python2.7_20385667ca0e9a5-51000-55fae98d.dmtcp in my example)
  
 P.S: If no option are defined, the default values of host (localhost) and port (7779) will be used.
 To specify a diferent host and port, either use --coord-host and --coord-port (or the environment variables DMTCP_COORD_HOST and DMTCP_COORD_PORT).
@@ -73,13 +74,14 @@ the code is as follow (named date.py):
 
 2. I changed the slurm partition ( for my test I picked the default which run a job for 15 minutes)
 
-\#SBATCH --partition=sched_any_quicktest
+   \#SBATCH --partition=sched_any_quicktest
 
- or just comment out the line to pick the default slurm partition
+   or just comment out the line to pick the default slurm partition
  
- \##SBATCH --partition=sched_any_quicktest
+   \##SBATCH --partition=sched_any_quicktest
 
 3. I changed checkpoint time  dmtcp will take a snapshot (I edited slurm_launch.job file  and changed the line start_coordinator -i 300). 
+
 for info, -i will checkpoint automatically every number of second (300 seconds in my example).
 
 4. I added the code needed to be run in the slurm_launch.job file (dmtcp_launch --rm mpirun ./date.py)
