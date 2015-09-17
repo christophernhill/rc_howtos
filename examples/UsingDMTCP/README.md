@@ -24,9 +24,8 @@ press c to take a snapshot of your running program, so that you can run it later
 
 Three files will be created : dmtcp_restart_script.sh, dmtcp_restart_script_(some_letters_and_numbers}.sh and {some_letters_and_numbers}.dmtcp.
 
-To re-run your code at the time you pressed c at, use:
-dmtcp_restart ckpt_*.dmtcp, otherwise dmtcp_restart_script.sh will work.
-(ckpt_python2.7_20385667ca0e9a5-51000-55fae98d.dmtcp in my example)
+To re-run your code at the time you pressed ceckpoint, use:
+dmtcp_restart ckpt_*.dmtcp (ckpt_python2.7_20385667ca0e9a5-51000-55fae98d.dmtcp in my example)
  
 P.S: If no option are defined, the default values of host (localhost) and port (7779) will be used.
 To specify a diferent host and port, either use --coord-host and --coord-port (or the environment variables DMTCP_COORD_HOST and DMTCP_COORD_PORT).
