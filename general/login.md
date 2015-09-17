@@ -15,14 +15,11 @@ then your ssh-command would look like
 
 and to scp files to the cluster you could use
 
-  scp -i /path/to/id_rsa some-tarball.tar.gz xyz3@eofe4.mit.edu:/nobackup1/xyz3/
+  <code>scp -i /path/to/id_rsa some-tarball.tar.gz xyz3@eofe4.mit.edu:/nobackup1/xyz3/</code>
 
 and to use sftp you could
 
-  sftp -i  /path/to/id_rsa xyz3@eofe4.mit.edu
-
-# mac-osx
-
+  <code>sftp -i  /path/to/id_rsa xyz3@eofe4.mit.edu</code>
 
 # windows
 
