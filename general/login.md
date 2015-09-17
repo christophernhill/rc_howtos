@@ -26,13 +26,13 @@ in order to simplify, you may encapsulate these options
 in your ssh config file, viz ~/.ssh/config. nb, X11 forwarding
 has been added to this example. 
 
-''''
+'''
 Host eofe*.mit.edu
   User xyz3
   IdentifyFile /path/to/id_rsa
   ForwardX11 yes
   ForwardX11Trusted yes
-''''
+'''
 
 this would allow the simpler commands
 
