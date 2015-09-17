@@ -1,7 +1,16 @@
-#Getting Started 
 
-The following guides were created based on the tutorial found here:
+
+ The following guides were created based on the tutorial found here:
 >www.uio.no/english/services/it/research/hpc/abel/help/software/Gaussian.html
+
+#Before you begin
+
+Make sure you are in the Gaussian group by typing:
+>groups
+
+If Gaussian is not listed, please email c3ddb-admin@techsquare.com to request access to the Gaussian group.
+
+#Getting Started
 
 
 It is strongly reccomended to make a new directory before running tests 
