@@ -81,7 +81,7 @@ the code is as follow (named date.py):
 
 3. I changed checkpoint time  dmtcp will take a snapshot (I edited slurm_launch.job file  and changed the line start_coordinator -i 300). 
 
-for info, -i will checkpoint automatically every number of second (300 seconds in my example).
+  for info, -i will checkpoint automatically every number of second (300 seconds in my example).
 
 4. I added the code needed to be run in the slurm_launch.job file (dmtcp_launch --rm mpirun ./date.py)
   
