@@ -1,9 +1,12 @@
+DMTCP is a tool that consists of saving a snapshot of the application's state, so that it can restart from that point in time. This is particularly important for long running application that are executed in a system with regular maintenance periods.
 
-**n.b: the dmtcp is preferable not running it as root.**
+DMTCP can be used in simple computer as well as in an Heigh performance computing system. 
 
+#To run a code with DMTCP on a simple machine :
+ 
 1. In a seperate terminal run dmtcp_coordinator
 
-2. In another termianl, run dmtcp_launch fibonacci_code
+2. In another termianl, run dmtcp_launch ./<your_code>
 
 3. On the dmtcp_coordinator use:
 
@@ -23,28 +26,11 @@ dmtcp_restart ckpt_*.dmtcp, otherwise dmtcp_restart_script.sh will work.
 
 P.S: If no option are defined, the default values of host (localhost) and port (7779) will be used.
 To specify a diferent host and port, either use --coord-host and --coord-port (or the environment variables DMTCP_COORD_HOST and DMTCP_COORD_PORT).
+
  
-To run a job with slurm, I found this codes to run and restart a job:
+#To run a job with slurm in a cluster :
 
-To run a job:
- 
-https://github.com/dmtcp/dmtcp/blob/master/plugin/batch-queue/job_examples/slurm_launch.job
-
-To relaunch the job to continue from where it stopped:
-
-https://github.com/dmtcp/dmtcp/blob/master/plugin/batch-queue/job_examples/slurm_rstr.job
-
-dmtcp_coordinatoor -i <time_in_second> is used to create a checkpoint at the second specified. 
-
-In the example:
-
-1. I ran a python code that prints current time with the next incremented number (starting from 1 to 900)
-
-[afadli@eofe4 dmtcp]$ Mon Aug 31 15:25:25 2015 	1
-
-[afadli@eofe4 dmtcp]$ Mon Aug 31 15:25:26 2015 	2
-
-[afadli@eofe4 dmtcp]$ Mon Aug 31 15:25:27 2015 	3 
+I created a python code that will print the current time and the hostname.
 
 the code is as follow (named date.py):
 
@@ -84,25 +70,18 @@ the code is as follow (named date.py):
 2. I changed the partition ( for my test I picked the default which run a job for 15 minutes)
 \#SBATCH --partition=sched_any_quicktest
 
- or just comment the line
+ or just comment out the line to pick the default slurm partition
  
  \##SBATCH --partition=sched_any_quicktest
 
-3. change the time dmtcp will take a checkpoint at (edit slurm_launch and chage the line start_coordinator -i 300). -i will checkpoint automatically every number of second (300 in my example).
+3. change the time dmtcp will take a checkpoint at i
+(I edited slurm_launch.job file  and changed the line start_coordinator -i 300). -i will checkpoint automatically every number of second (300 seconds in my example).
 
-4. dmtcp_launch --rm mpirun ./date.py
+4. add the code needed to be run in the slurm_launch.job file (dmtcp_launch --rm mpirun ./date.py)
   
-5. run the job with: sbatch slurm_launch.
+5. run the job with: sbatch slurm_launch.job 
 
   The user will end up with dmtcp_command.${SLURM_JOBID} ( --job-name=dmtcp_command ) and any output file. 
 
-6. To restart the job for the check point, run sbatch slurm_restart.job.
-
-This is my example : 
-
-[afadli@eofe4 dmtcp]$ sbatch slurm_launch.job
- 
-Submitted batch job 2276221
-
-
+6. To restart the job from the last check point, run : sbatch slurm_restart.job.
 
