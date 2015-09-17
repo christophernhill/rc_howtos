@@ -11,7 +11,7 @@ a passphrase protecting the private portion of ssh-key).
 if your account on the engaging-cluster is 'xyz3', 
 then your ssh-command would look like 
 
-  ssh -i /path/to/id_rsa xyz3@eofe4.mit.edu
+  <code>ssh -i /path/to/id_rsa xyz3@eofe4.mit.edu</code>
 
 and to scp files to the cluster you could use
 
