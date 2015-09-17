@@ -11,13 +11,13 @@ a passphrase protecting the private portion of ssh-key).
 if your account on the engaging-cluster is 'xyz3', 
 then your ssh-command would look like 
 
-```
+```shell
 ssh -i /path/to/id_rsa xyz3@eofe4.mit.edu
 ```
 
 and to scp files to the cluster you could use
 
-```
+```shell
 scp -i /path/to/id_rsa some-tarball.tar.gz xyz3@eofe4.mit.edu:/nobackup1/xyz3/
 ```
 
