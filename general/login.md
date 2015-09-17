@@ -11,15 +11,21 @@ a passphrase protecting the private portion of ssh-key).
 if your account on the engaging-cluster is 'xyz3', 
 then your ssh-command would look like 
 
-  <code>ssh -i /path/to/id_rsa xyz3@eofe4.mit.edu</code>
+```
+ssh -i /path/to/id_rsa xyz3@eofe4.mit.edu
+```
 
 and to scp files to the cluster you could use
 
-  <code>scp -i /path/to/id_rsa some-tarball.tar.gz xyz3@eofe4.mit.edu:/nobackup1/xyz3/</code>
+```
+scp -i /path/to/id_rsa some-tarball.tar.gz xyz3@eofe4.mit.edu:/nobackup1/xyz3/
+```
 
 and to use sftp you could
 
-  <code>sftp -i  /path/to/id_rsa xyz3@eofe4.mit.edu</code>
+```
+sftp -i  /path/to/id_rsa xyz3@eofe4.mit.edu
+```
 
 
 in order to simplify, you may encapsulate these options 
@@ -36,11 +42,11 @@ Host eofe*.mit.edu
 
 this would allow the simpler commands
 
-  <code>
-  ssh eofe4.mit.edu
-  scp some-tarball.tar.gz eofe4.mit.edu:/nobackup1/xyz3/
-  sftp eofe4.mit.edu
-  </code>
+```
+ssh eofe4.mit.edu
+scp some-tarball.tar.gz eofe4.mit.edu:/nobackup1/xyz3/
+sftp eofe4.mit.edu
+```
 
 # windows
 
