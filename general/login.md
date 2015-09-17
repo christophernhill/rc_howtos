@@ -42,7 +42,7 @@ Host eofe*.mit.edu
 
 this would allow the simpler commands
 
-```
+```Shellsession
 ssh eofe4.mit.edu
 scp some-tarball.tar.gz eofe4.mit.edu:/nobackup1/xyz3/
 sftp eofe4.mit.edu
