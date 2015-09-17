@@ -98,7 +98,7 @@ gaussiantest.sh
 #SBATCH --mem-per-cpu=1G
 #SBATCH --partition defq
 
-. /etc/profile.d/modules.sh
+source /etc/profile.d/modules.sh
 module add c3ddb/gaussian
 g09 &lt; hexclethane.com | tee ~/gaussianwork/hexclethane.log
 
