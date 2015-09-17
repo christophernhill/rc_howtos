@@ -25,6 +25,6 @@ else
   module add mit/matlab/2015b
 fi
 
-## science ! 
+## science
 sleep 15
 
