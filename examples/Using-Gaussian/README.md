@@ -10,12 +10,15 @@ Make sure you are in the Gaussian group by typing:
 
 If Gaussian is not listed, please email c3ddb-admin@techsquare.com to request access to the Gaussian group.
 
+If at any point you get a 'command not found: g09' error on the nodes please remind the admin to run 'scontrol reconfigure' since slurm caches group membership.
+
+
 #Getting Started
 
 
 It is strongly reccomended to make a new directory before running tests 
 
->mkdir /home/$USER/gaussianwork && cd  /home/$USER/gaussianwork
+>mkdir ~/gaussianwork && cd  ~/gaussianwork
 
 The examples in this guide will use the hexclethane.com file. You can either:
 
@@ -66,16 +69,13 @@ Load the Gaussian Module for c3ddb
 You will need to add the gaussian module each time you login to c3ddb
 > module add c3ddb/gaussian
 
-The variable PGI_TERM needs to be unset or else it will cause script errors
->unset PGI_TERM
-
 
 The example in this guide will use the hexclethane.com file shown above.
 
 Run your .com job file and produce a log file
 
 
->g09 < hexclethane.com | tee /home/$USER/gaussianwork/hexclethane.log
+>g09 < hexclethane.com | tee ~/gaussianwork/hexclethane.log
 
 #Running Gaussian from a batch script
 
@@ -98,10 +98,9 @@ gaussiantest.sh
 #SBATCH --mem-per-cpu=1G
 #SBATCH --partition defq
 
-
+. /etc/profile.d/modules.sh
 module add c3ddb/gaussian
-unset PGI_TERM
-g09 &lt; hexclethane.com | tee /home/$USER/gaussianwork/hexclethane.log
+g09 &lt; hexclethane.com | tee ~/gaussianwork/hexclethane.log
 
 </pre>
 
