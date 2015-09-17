@@ -72,6 +72,7 @@ the code is as follow (named date.py):
    module add engaging/python/2.7.8   << because my code is a python code
 
 2. I changed the slurm partition ( for my test I picked the default which run a job for 15 minutes)
+
 \#SBATCH --partition=sched_any_quicktest
 
  or just comment out the line to pick the default slurm partition
