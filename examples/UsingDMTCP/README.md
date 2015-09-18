@@ -27,13 +27,12 @@ Three files will be created : dmtcp_restart_script.sh, dmtcp_restart_script_(som
 To re-run your code at the time you pressed ceckpoint, use:
 dmtcp_restart ckpt_*.dmtcp (ckpt_python2.7_20385667ca0e9a5-51000-55fae98d.dmtcp in my example)
  
-P.S: If no option are defined, the default values of host (localhost) and port (7779) will be used.
-To specify a diferent host and port, either use --coord-host and --coord-port (or the environment variables DMTCP_COORD_HOST and DMTCP_COORD_PORT).
+P.S: If no option are defined when running dmtcp_launch, the default values of host (localhost) and port (7779) will be used.
+To specify a diferent host and port, either use dmtcp_launch --coord-host and/or dmtcp_launch --coord-port (or the environment variables DMTCP_COORD_HOST=mymachine and DMTCP_COORD_PORT=7878).
 
- 
 #To run a job with slurm on a high performance computing system :
 
-I created a python code that will print the current time and the hostname.
+For my test, I created a python code that will print the current time and the hostname.
 
 the code is as follow (named date.py):
 
