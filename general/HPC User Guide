@@ -109,10 +109,13 @@
 
 **How to login to cluster**
 
+.. note:: 
+	User can only login to cluster using ssh key. There is no password associated with user account.
+	
+::
 	For engaging cluster users:
 
 			ssh -i /path/to/sshkey -l {username} eofe4.mit.edu
-
 		or	ssh -i /path/to/sshkey -l {username} eofe5.mit.edu
 
 	For C3DDB cluster users:
