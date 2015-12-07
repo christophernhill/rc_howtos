@@ -1,122 +1,33 @@
-**Who can get a HPC account?**
+===========================
+Frequently Asked Questions
+===========================
 
-	Any one who is a MIT employed and currently working in the MIT research community
+Who can get a HPC account?
+--------------------------
 
-**How to get a HPC user account?**
+.. code-block::
+
+Any one who is a MIT employed and currently working in the MIT research community
+
+How to get a HPC user account?
+------------------------------
 
 	First, user needs to request an account. From your browser, goto https://eofe1.mit.edu/request_account.
 	Once the account request gets approved, user will receive a confirmation email.
-
-.. note:: Example email for engaging users
-
-	welcome to the engaging cluster
-
-here is a very low-frill introduction
-to the cluster and its environment. 
-
-     	1. mailing list
-
-		engaging users are subscribed to the engaging1-users@mit.edu mailing list
-
-     	2. login
-		ssh -i /path/to/sshkey -l {username} eofe4.mit.edu
-
-		ssh -i /path/to/sshkey -l {username} eofe5.mit.edu
-
-     	3. directories
-
-		~{username} 		- working space for source code, scripts,hand-edited files etc.
-
-		/nobackup1/{username}	- lustre parallel file system for parallel I/O.
-
-		/pool001/{username}	- NFS file system if you need it.
-
-     	4. software
-
-		module avail
-
-     	5. scheduler
-
-		SLURM:
-		
-		1. what jobs are running
-
-			squeue -a
-
-		2. what nodes are temporarily reserved for specific users
-
-			sinfo -T
-
-		3. what is running in the default short test queue useful for getting started and debugging
-
-			squeue -p {partition name}
-
-		4. what nodes are in a particular "partition"
-
-			sinfo -p {partition name}
-
-			Note nodes that have been temporarily allocated to dedicated projects are shown as down*.
-
-			1. launch an interactive session e.g. on one node with 16 cores and exclusive use of the node
-
-				salloc -N 1 -n 16 -p {partition name}—time=1:00:00 --exclusive
-
-			2. ask for a node with a GPU resource
-
-				salloc --gres=gpu:1 -N 1 -n 16 -p {partition name} --time=1:00:00 --exclusive
-
-			3. batch job running something
-
-				cat <
-
-				myjob.slurm
-
-				#!/bin/bash
-
-				#SBATCH --gres=gpu:1
-
-				#SBATCH -N 1
-
-				#SBATCH -n 16
-
-				#SBATCH --time=1:00:00
-
-				#SBATCH --exclusive
-
-				. /etc/profile.d/modules.sh
-
-				module add gcc
-
-				module add mvapich2/gcc
-
-				/cm/shared/apps/cuda55/sdk/current/1_Utilities/deviceQuery/deviceQuery
-				
-
-
-				sbatch myjob.slurm
-
-
-     	6. useful tutorials http://www.tchpc.tcd.ie/node/74
-
-     	7. system info
-
-		- 234 64GB RAM
-		- 2 x 8-core 2.0GHz CPUs
-		- 90 K20m GPU
-		- 16 Xeon phi
-		- base OS - RHEL/Centos 6.4 
-
 
 **How to login to cluster**
 
 .. note:: 
 	User can only login to cluster using ssh key. There is no password associated with user account.
 	
-::
-	For engaging cluster users:
+.. code-block::
 
-			ssh -i /path/to/sshkey -l {username} eofe4.mit.edu
-		or	ssh -i /path/to/sshkey -l {username} eofe5.mit.edu
+For engaging cluster users:
+
+ssh -i /path/to/sshkey -l {username} eofe4.mit.edu
+or	ssh -i /path/to/sshkey -l {username} eofe5.mit.edu
+
+.. code-block::
 
 	For C3DDB cluster users:
 
