@@ -125,7 +125,6 @@ How to use SLURM?
 	module add mvapich2/gcc
 	/cm/shared/apps/cuda55/sdk/current/1_Utilities/deviceQuery/deviceQuery
 
-	
 	sbatch myjob.slurm
 
 .. code-block::
@@ -135,23 +134,24 @@ How to use SLURM?
 	squeue -a			/* show all jobs
 	squeue -p {partition name} 	/* show jobs in specific partition indicated by {partition name}
 
+.. code-block::
+
 	delete a job
 
-::
+	scancel {job ID}		/* delete a job
 
-		scancel {job ID}		/* delete a job
+.. code-block::
 
 	show nodes
 
-::
-
-		sinfo -T			/* show nodes temporarily reserved for specific users
-		sinfo -p {partition name}	/* show nodes in specific partition indicated by <partition name>
+	sinfo -T			/* show nodes temporarily reserved for specific users
+	sinfo -p {partition name}	/* show nodes in specific partition indicated by <partition name>
 
 
-**How to load modules**
+How to load modules?
+--------------------
 
-::
+.. code-block::
 
 	module list				/* List loaded modules
 	module avail				/* List modules available on the system
@@ -179,7 +179,6 @@ Useful links:
 
 .. code-block::
 
-	General:
 	http://www.tchpc.tcd.ie/node/74
 	http://www.tchpc.tcd.ie/node/128
 
@@ -187,5 +186,4 @@ Useful links:
 
 	For matlab users:
 	http://www.mathworks.com/help/distcomp/createjob.html
-
-http://www.mathworks.com/help/distcomp/parallel.job.html
+	http://www.mathworks.com/help/distcomp/parallel.job.html
