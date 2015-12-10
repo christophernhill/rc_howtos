@@ -5,7 +5,7 @@ Frequently Asked Questions
 Who can get a HPC account?
 --------------------------
 
-Any one who is a MIT employed and currently working in the MIT research community
+Any one who is MIT employed and currently working in the MIT research community
 
 How to get a HPC user account?
 ------------------------------
@@ -56,9 +56,11 @@ Where are the scratch disk space I can use?
 What is the space limit for home directory and scratch space?
 -------------------------------------------------------------
 
-User home directory space is limited. It is intend for user to save their code, documents  and small tests and it is not for data storage. 
+User home directory space is limited. It is intend for users to save their code, documents  and small tests and it is not for large data storage. 
 
 The scratch space is for storing computational data and it is on much fast Lustre system. Since the space is shared among all cluster users. Please be considerate and clean up your unwanted or not needed data as often as you can.
+
+
 
 The memory for each CPU core
 ----------------------------
