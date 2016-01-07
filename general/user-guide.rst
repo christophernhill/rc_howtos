@@ -14,7 +14,11 @@ First, user needs to request an account. From your browser,
 
 .. code-block::
 
-	engaging users: goto https://eofe1.mit.edu/request_account.
+	engaging users: goto https://eofe1.mit.edu/request_account
+	
+.. code-block::
+
+	c3ddb users: 	goto https://c3ddb01.mit.edu/request_account
 
 Once the account request gets approved, user will receive a confirmation email.
 
