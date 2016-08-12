@@ -8,7 +8,10 @@
 # to create directory tree. This means you know where any file is if you
 # know its name. 
 #
+# 1. First use ls -1 to get a list of all the files in the directory
 # /bin/ls -1 /nobackup1/denru/Dataset/ImageNet/2014/train/ > big_ls1.txt
+# 
+# 2. Now generate commands to make directory hierarchy and redistribute files
 cat big_ls1.txt | while read line
 do
 fn=$line
