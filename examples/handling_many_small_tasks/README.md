@@ -17,3 +17,10 @@ A lot of rather sophisticated tools exist for handling these sort of workloads. 
 RabbitMQ and python Celery. These are great tools, but involve quite a bit of infrastructure. Some of the example here
 are much more lightweight and use basic bash or pythong. They can be useful although they may not scale to millions of
 tasks. 
+
+Script directories
+
+* bash_scripting/ This example is the simplest. It uses bash and srun to illustrate lauching a set
+   of tasks that are of random duration of between 1 and 10 seconds. Only as many tasks are running 
+   at once as the number of CPU cores available to the job. As a task finishes another will start so that
+   all the CPU cores are kept busy and work starts up on a CPU core as it becomes available. 
