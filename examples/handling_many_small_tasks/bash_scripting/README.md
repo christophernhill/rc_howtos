@@ -6,7 +6,7 @@ The example is written to use a partition `sched_any_quicktest` to request two n
 Assuming you are on a system with a partition called `sched_any_quicktest` then
 
 ```
-sbatch dist_tasks.sbatch 
+$ sbatch dist_tasks.sbatch 
 ```
 
-will run the example. Otherwise the `sbatch dist_tasks.sbatch` script will need editing to match your system. 
+in a terminal will run the example. Otherwise the `sbatch dist_tasks.sbatch` script will need editing to match your system. 
