@@ -7,7 +7,7 @@ resources.
 
 There is a wealth of material online regarding using the SLURM scheduler/resource
 manager for a variety of workflows. Links to some of that material are provided below. 
-The material provided here  tries to extend existing online collections, by providing
+The material provided here  tries to extend existing online collections, by collecting
 examples that are taken from actual facility support requests and needs. 
 
 Online Resources For Introductory Material
