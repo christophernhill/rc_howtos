@@ -21,7 +21,7 @@ tasks.
 Script directories
 
 * `bash_scripting/`
-    This example is the simplest. It uses bash and srun to illustrate lauching a set
+     This example is the simplest approach. It uses bash and srun to illustrate lauching a set
      of tasks that are of random duration of between 1 and 10 seconds. Only as many tasks are running 
-    at once as the number of CPU cores available to the job. As a task finishes another will start so that
-   all the CPU cores are kept busy and work starts up on a CPU core as it becomes available. 
+     at once as the number of CPU cores available to the job. As a task finishes another will start so that
+     all the CPU cores are kept busy and work starts up on a CPU core as it becomes available. 
