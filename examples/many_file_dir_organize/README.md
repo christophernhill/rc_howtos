@@ -1,8 +1,12 @@
 
 Very basic shell script to generate commands that redistribute files in a directory with too many files in it to a
-hierachy of sub-directories under a prefix. In general it is not a good idea to have more than 50,000 files in a directory. 
+hierachy of sub-directories under a prefix. In general it is not a good idea to have more than 50,000 files in a directory
+on many file systems. 
 Directories with very large number of files can take a long time for list and performance of programs like Matlab
-that try and cache directory contents for convenience can be impacted considerably. 
+that try and cache directory contents for convenience can be impacted considerably. While there are specialized
+file systems that can scale to far more files in a single directory the price premium for such systems can be large. 
+A more cost effective approach is to develop working practices that distribute files across some sort
+of hierarchical tree. 
 
 The shell script in this directory creates commands to redistribute the files in a directory into a tree
 hierarchy in which file locations are a deterministic function of the orginal file name. This makes it possible
