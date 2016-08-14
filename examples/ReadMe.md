@@ -1,5 +1,5 @@
-Example Job Scripts
-===================
+Examples of research computing resources uses.
+==============================================
 
 Examples for specific
 software packages on the engaging|c3ddb research computing 
