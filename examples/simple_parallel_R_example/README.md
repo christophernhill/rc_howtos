@@ -1,6 +1,8 @@
 The notes here contain a simple parallel R example from a politicial science
 tutorial. The steps are general and could apply to many different fields 
 where a large number of R based parallel task computations are needed. 
+The notes illustrate using R on a particular SLURM cluster, but much of
+the material can be applied to any SLURM cluster. 
 
 Note - for some functions R can be a slow processing language, (for example see, http://julialang.org/benchmarks/ ),
 although it is reasonably fast for other 
