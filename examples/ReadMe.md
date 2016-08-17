@@ -13,6 +13,10 @@ examples that are taken from actual facility support requests and needs.
 Online Resources For Introductory Material
 ==========================================
 
+Our shared cluster resources usually make use of the SLURM scheduler. 
+Using the scheduler requires learning a few basic tricks, but once those
+are understood and learned the scheduler can be very useful for automating large, complicated
+sets of computational processing.
 The basic role of SLURM on a cluster is to provide a mechanisms to share
 the resources (espically compute devices (CPUs and GPUs), cores on CPUs and memory)
 amongst a set of workflow. SLURM tries to provide effective mechanisms
