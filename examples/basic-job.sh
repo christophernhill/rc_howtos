@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -l
 
 ## slurm-directives
 #SBATCH --job-name=foo
