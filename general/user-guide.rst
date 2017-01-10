@@ -152,6 +152,9 @@ How to use SLURM?
 
 	sinfo -T			/* show nodes temporarily reserved for specific users
 	sinfo -p {partition name}	/* show nodes in specific partition indicated by <partition name>
+	
+.. code-block::
+        scontrol --details show partition /* Shows which partitions an account can access */
 
 
 How to load modules?
