@@ -11,10 +11,23 @@
 # a Singularity image from the root account in the VM. 
 #
 
-# Switch to working directory
+# Switch to some working directory - can be changed as needed
 WDIR="./singularity-build-dir"
 mkdir -p ${WDIR}
 cd ${WDIR}
 
 # 1. Create config file to ensure VM has reasonable memory
-cat 
+#    (default Vagrant is 512MB, which is too small for some Python 
+#    (package compile stages.
+cat > Customfile <<'EOFA'
+ config.vm.provider "virtualbox" do |v|
+  v.memory = 4096
+  v.cpus = 4
+ end
+EOFA
+
+# 2. Create a vagrant image description for an Ubuntu machine
+# Ubuntu seems to handle "Guest Additions", that allow host file
+# system to map into VM, well. This is a bit broken in CentOS 
+# (see https://github.com/CentOS/sig-cloud-instance-build/issues/107 )
+vagrant init ubuntu
