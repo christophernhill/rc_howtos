@@ -30,5 +30,4 @@ EOFA
 # Ubuntu seems to handle "Guest Additions", that allow host file
 # system to map into VM, well. This is a bit broken in CentOS 
 # (see https://github.com/CentOS/sig-cloud-instance-build/issues/107 )
-\rm VagrantFile
-vagrant init ubuntu
+vagrant init --force ubuntu
