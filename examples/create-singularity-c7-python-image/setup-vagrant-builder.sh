@@ -31,4 +31,3 @@ EOFA
 # system to map into VM, well. This is a bit broken in CentOS 
 # (see https://github.com/CentOS/sig-cloud-instance-build/issues/107 )
 vagrant init ubuntu --provider=virtualbox
-vagrant up          --provider=virtualbox
