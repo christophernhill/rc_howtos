@@ -15,6 +15,7 @@
 WDIR="./singularity-build-dir"
 mkdir -p ${WDIR}
 cd ${WDIR}
+CURDIR=`pwd`
 
 # 1. Create config file to ensure VM has reasonable memory
 #    (default Vagrant is 512MB, which is too small for some Python 
@@ -31,3 +32,8 @@ EOFA
 # system to map into VM, well. This is a bit broken in CentOS 
 # (see https://github.com/CentOS/sig-cloud-instance-build/issues/107 )
 vagrant init --force ubuntu/trusty64
+
+# 3. Provide instructions for next step
+echo 'Creation of vagrant VM config done'
+echo 'Setup is in directory '${CURDIR}
+echo "To start VM \" cd ${CURDIR}; vagrant up\""
