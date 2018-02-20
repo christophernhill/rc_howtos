@@ -1,4 +1,4 @@
-import Queue
+Rimport Queue
 import threading
 from threading import Thread
 import random
@@ -38,8 +38,7 @@ def do_work(item):
  cmd="srun -N 1 --ntasks=1 --exclusive"
  cmd=cmd + " --output=%s "%od
  cmd=cmd + " --error=%s "%ed
- cmd=cmd + " /bin/bash -c ./runcmd.sh"
- cmd=cmd + " " + item['filename']
+ cmd=cmd + " /bin/bash -c \"./runcmd.sh %s\""%item['filename']
  # cmd="sleep %d"%item['pause']
  print threading.currentThread().getName(), cmd
  p=subprocess.Popen(cmd, shell=True,stdout=subprocess.PIPE)
