@@ -41,6 +41,7 @@ From: centos:latest
  yum -y install net-tools
  yum -y install nmap-ncat
  yum -y install telnet
+ yum -y install python-devel
  yum -y install python-pip
  pip install --upgrade pip
  pip install numpy
