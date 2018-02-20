@@ -11,6 +11,8 @@ is launched using Vagrant and Virtualbox.
 
 The scripts here work as follows.
 
+ **```driver.sh```** - This script calls all the scripts below in sequence.
+
  1. Script to create vagrant configuration 
     file, "Vagrantfile". This specifies the basic setup of the bootstrap VM 
     virtual hardware.
