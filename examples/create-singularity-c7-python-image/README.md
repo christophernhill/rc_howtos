@@ -17,16 +17,20 @@ The scripts here work as follows.
   ```
    ./singularity-vagrant-step1.sh
   ```
- 1. Script to start the bootstrap VM via vagrant
+ 2. Script to start the bootstrap VM via vagrant
   ```
    ./singularity-vagrant-step2.sh
   ```
- 1. Script to add needed software (including singularity) to the bootstrap VM.
+ 3. Script to add needed software (including singularity) to the bootstrap VM.
   ```
    ./singularity-vagrant-step3.sh
   ```
- 1. Script that uses singularity (running on bootstrap VM) to create a
+ 4. Script that uses singularity (running on bootstrap VM) to create a
     contianer image for use on shared cluster.
   ```
    ./singularity-vagrant-step4.sh
+  ```
+ 5. Script that cleans up intermediate files and VMs.
+  ```
+   ./singularity-vagrant-step5.sh
   ```
