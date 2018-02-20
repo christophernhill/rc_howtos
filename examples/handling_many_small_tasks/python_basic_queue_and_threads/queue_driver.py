@@ -38,7 +38,7 @@ def do_work(item):
  cmd="srun -N 1 --ntasks=1 --exclusive"
  cmd=cmd + " --output=%s "%od
  cmd=cmd + " --error=%s "%ed
- cmd=cmd + " /bin/bash -c \"./runcmd.sh %s\""%item['filename']
+ cmd=cmd + " /bin/bash -c \"sleep %d ; hostname\""%item['pause']
  # cmd="sleep %d"%item['pause']
  print threading.currentThread().getName(), cmd
  p=subprocess.Popen(cmd, shell=True,stdout=subprocess.PIPE)
@@ -47,11 +47,9 @@ def do_work(item):
 
 def source():
  sl=[]
- f=open("filelist.txt","r")
- x=f.read().splitlines()
- f.close()
- for l in x:
-  sl.append({'filename':l})
+ for x in range(100):
+  lp=random.randint(1, 10)
+  sl.append({'pause':lp})
  return sl
 
 def worker():
